@@ -1,5 +1,5 @@
 # ProjectPortfolio
-Data Analytics Practitioner Portfolio
+Data Analytics Practitioner
 
 Module 1 – Data Acquisition
 
