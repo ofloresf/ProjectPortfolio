@@ -1,0 +1,9 @@
+If you get an error message like this one:
+
+TITLE: SQL Server Import and Export Wizard ------------------------------ The operation could not be completed. ------------------------------ ADDITIONAL INFORMATION: The 'Microsoft.ACE.OLEDB.16.0' provider is not registered on the local machine. (System.Data) ------------------------------ BUTTONS: OK ------------------------------
+
+When trying to import data from Excel into SQL Server, download the following 32-bits file, then install it from the CMD Command Prompt in Windows (As an Administrator) with /quiet at the end [AccessDatabaseEngine.exe /quiet]. Once this is done you will import the data with no problem.
+
+https://www.microsoft.com/en-us/download/details.aspx?id=54920
+
+Please let me know if you need any help.
