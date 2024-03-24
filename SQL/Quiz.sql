@@ -3,7 +3,7 @@ USE Medical
 --You don't need to calculate ages, you can use date of birth.
 
 SELECT LastName,
-               FirstName 
+Â  Â  Â  Â  Â  Â  Â  Â FirstNameÂ 
 FROM Patients
 ORDER BY DOB DESC
 ---Write a query to select all rows and columns from the Patients table.
@@ -18,20 +18,20 @@ FROM Patients
 WHERE LastName LIKE 'R%'
 
 --Write a query to return any patient (lastname, firstname) whose last name is either Lee or Smith.
-SELECT LastName, 
-               FirstName
+SELECT LastName,Â 
+Â  Â  Â  Â  Â  Â  Â  Â FirstName
 FROM Patients
 WHERE LastName IN ('Lee', 'Smith')
 
 --Write a query to return patients (lastname, firstname) whose last name starts and ends with A
-SELECT LastName, 
-              FirstName
+SELECT LastName,Â 
+Â  Â  Â  Â  Â  Â  Â  FirstName
 FROM Patients
 WHERE LastName LIKE 'a%a'
 
 --Write a query to return all providers (lastname, firstname) in order by last name from A-Z.
-SELECT LastName, 
-       FirstName
+SELECT LastName,Â 
+Â  Â  Â  Â FirstName
 FROM Doctors
 ORDER BY LastName
 
@@ -44,8 +44,8 @@ WHERE LastName = 'Jones'
 --Write a query to list each patient and their encounter dates in order by patient last name (A-Z) and encounter date (oldest first).
 
 SELECT p.LastName,
-              p.FirstName,
-              e.Date       
+Â  Â  Â  Â  Â  Â  Â  p.FirstName,
+Â  Â  Â  Â  Â  Â  Â  e.DateÂ  Â  Â  Â 
 FROM Patients p
 JOIN Encounters e ON p.PatientID = e.PatientID
 ORDER BY p.LastName, e.Date
@@ -53,26 +53,26 @@ ORDER BY p.LastName, e.Date
 --Write a query to identify all blood pressures that are either too long or too short.  A valid blood pressure contains 2 or 3 numbers, a backslash (/), and 2 or 3 numbers. Include the patient name, date of visit, facility and provider.
 
 SELECT p.LastName+','+p.FirstName 'Patient Name',
-              e.Date 'Date of Visit',
-              f.Name 'Facility Name',
-             d.LastName+','+d.FirstName 'Provider'
+Â  Â  Â  Â  Â  Â  Â  e.Date 'Date of Visit',
+Â  Â  Â  Â  Â  Â  Â  f.Name 'Facility Name',
+Â  Â  Â  Â  Â  Â  Â d.LastName+','+d.FirstName 'Provider'
 FROM Encounters e
 JOIN Patients p ON e.PatientID = p.PatientID
 JOIN Facilities f ON e.FacilityID = f.FacilityID
 JOIN Doctors d ON e.DoctorID = d.DoctorID
 JOIN BloodPressure b ON e.EncounterID = b.EncounterID
 WHERE BP NOT LIKE '%/%'
-                     AND Len(bp) BETWEEN 5 AND 7
-                     AND bp NOT LIKE '%[A-Z, A-Z]%'
-                     AND Charindex('/', bp) BETWEEN 3 AND 4
-                     AND bp NOT LIKE '%.%'
-                     AND bp NOT LIKE '%/%/%'
-                     AND Charindex(Char(39), bp) < 1
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â AND Len(bp) BETWEEN 5 AND 7
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â AND bp NOT LIKE '%[A-Z, A-Z]%'
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â AND Charindex('/', bp) BETWEEN 3 AND 4
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â AND bp NOT LIKE '%.%'
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â AND bp NOT LIKE '%/%/%'
+Â  Â  Â  Â  Â  Â  Â  Â  Â  Â  Â AND Charindex(Char(39), bp) < 1
  --Write a query to return patient name and encounter date and make sure it includes patients who have had no encounters, if any.  
  --For those, we should still see the name but no encounter date.
 
 SELECT p.LastName+','+p.FirstName 'Name',
-               e.Date 'Encounter Date'
+Â  Â  Â  Â  Â  Â  Â  Â e.Date 'Encounter Date'
 FROM Patients p
 LEFT JOIN Encounters e ON p.PatientID = e.PatientID
 ------------------------------------------------------------------
