@@ -7,7 +7,7 @@
 
 /** Large block of comment can be preceded by a forward-slash / and two asterisks ** and then end ed by two asterisks ** and a backslash /
 	To begin selecting data, first use the database that you wish to pull data FROM. Execute the command below to USE the 'Medical' database, where all our data are found.
-	Highlight the command with your mouse and click "Execute.î
+	Highlight the command with your mouse and click "Execute.‚Äù
 **/
 
 -- GETTING STARTED
