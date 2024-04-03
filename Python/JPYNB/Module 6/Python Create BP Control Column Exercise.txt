@@ -1,0 +1,10 @@
+Python Create BP Control Column Exercise
+Create a Python program that opens your BP.csv file and evaluates for each row whether the systolic value is < 140 and the diastolic value is < 90.
+
+The code should create a new column called 'Control'.
+
+If both of the above conditions are true, the value 'Y' should be written to the 'Control' column.
+
+If systolic is >= 140 OR diastolic is >= 90, 'N' should be written to the 'Control' column.
+
+Save the output to a new file called 'bp_control.csv'.
