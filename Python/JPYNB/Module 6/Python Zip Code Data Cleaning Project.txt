@@ -1,0 +1,17 @@
+Python Zip Code Data Cleaning Project
+We will use the BP data cleaning files as a basis for cleaning another data set.
+
+Download and open the Zip_Codes.txt file.  The Zip Codes must be delimited by a dash, or hyphen:  "-"
+
+The Zip_Codes.txt file contains multiple delimiters:  
+\
+_
+-
+.
+/
+|
+Modify your 1st BP cleaning Python file to replace the bad delimiters above with a hyphen, or "-". 
+
+Modify your 2nd BP wrangling Python file to split the cleaned Zip Code data into two columns at the "-".
+
+Save the cleaned data file as 'zip_code.csv'
